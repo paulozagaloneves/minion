@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: minion
+
+  cloud:
+    discovery:
+      enabled: false
+      
+management:
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
+    restart:
+      enabled: true
+      
+minion:
+  account:
+    type: "happy-minion"      
+    
+    

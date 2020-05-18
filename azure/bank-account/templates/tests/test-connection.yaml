@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "bank-account.fullname" . }}-test-connection"
+  labels:
+{{ include "bank-account.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['{{ include "bank-account.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

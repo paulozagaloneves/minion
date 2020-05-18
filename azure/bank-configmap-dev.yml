@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bank-account
+  namespace: dev
+data:
+  # example of a simple property defined using --from-literal
+  minion.account.type: one-eyed-minion
+  minion.customer.type: two-eyed-minion
+  # example of a complex property defined using --from-file
+  #application.yml: |-
+  #  minion:
+  #    account:
+  #      type: one-eyed-minion    

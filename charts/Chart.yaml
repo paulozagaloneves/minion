@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "0.0.5"
+description: Bank Account Microservice Helm Chart
+name: bank-account
+version: 0.1.0
+maintainers: 
+  - name: Paulo Neves
+    email: paulo.zagalo.neves@gmail.com

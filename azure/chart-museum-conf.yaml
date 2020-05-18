@@ -1,0 +1,14 @@
+env:
+  open:
+    STORAGE: microsoft
+    STORAGE_MICROSOFT_CONTAINER: helm-charts-container
+    # prefix to store charts for microsoft storage backend
+    STORAGE_MICROSOFT_PREFIX:
+    DISABLE_API: false
+    ALLOW_OVERWRITE: true
+  secret:
+    AZURE_STORAGE_ACCOUNT: "aksgitopschartmuseum" ## azure storage account
+    AZURE_STORAGE_ACCESS_KEY: "qI85vt7FOGFrMPQbv7NXq6i4ffzOrJ83Qj6RHuF0bmSALokO7FMmj/w+SoPt/ZNJDva52Wq67DRpA9smGE1WGA==" ## azure storage account access key
+service:
+  type: LoadBalancer
+  nodePort: 30010 
