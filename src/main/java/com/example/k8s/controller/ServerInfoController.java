@@ -4,6 +4,8 @@ package com.example.k8s.controller;
 import com.example.k8s.config.MinionConfig;
 import com.example.k8s.lib.MinionsLibrary;
 import java.net.InetAddress;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
@@ -43,6 +45,8 @@ public class ServerInfoController {
     String remoteHostname = InetAddress.getLoopbackAddress().getHostName();
 
     StringBuilder sb = new StringBuilder("");
+    sb.append("Datetime: " + LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME))
+        .append("<br>");
     sb.append("Server Port: " + port).append("<br>");
     sb.append("Local Address: " + localHostAddress).append("<br>");
     sb.append("Local Hostname: " + localHostname).append("<br>");
